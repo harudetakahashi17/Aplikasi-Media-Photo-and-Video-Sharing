@@ -65,8 +65,9 @@ Kelas Driver
 - panggil method main menu
 
 //==================================================//
-Phase 1:
 
-Masing-Masing Cari tentang Aplikasi Media Photo and Video Sharing
-Buat Konsep tersendiri nanti kita brainstorming.
+Phase 3:
+
+Buat Menu dan lengkapi Method tambahan yang sekiranya
+diperlukan.
 //==================================================//
