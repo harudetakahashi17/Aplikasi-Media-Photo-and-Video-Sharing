@@ -5,13 +5,18 @@
  */
 package mediashareapps;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Harude
  */
 public class Akun {
-    private long uid;
-    private long totUid;
+
+    private List<Akun> UA;
+    private List<Media> UM;
+    private static long uid;
     private String Uname;
     private String Passwd;
     private String IRLName;
@@ -23,6 +28,8 @@ public class Akun {
     private int birthY;
 
     public Akun(String Uname, String Passwd, String IRLName, String email, String phone, char gender, int birthD, int birthM, int birthY) {
+        UA = new ArrayList<>();
+        uid++;
         this.Uname = Uname;
         this.Passwd = Passwd;
         this.IRLName = IRLName;
@@ -37,17 +44,21 @@ public class Akun {
     public long getUid() {
         return uid;
     }
-
-    public void setUid(long uid) {
-        this.uid = uid;
+    
+    public List<Akun> getUA() {
+        return UA;
     }
 
-    public long getTotUid() {
-        return totUid;
+    public void setFriend(Akun a) {
+        UA.add(a);
     }
 
-    public void setTotUid(long totUid) {
-        this.totUid = totUid;
+    public List<Media> getUM() {
+        return UM;
+    }
+
+    public void setUM(List<Media> UM) {
+        this.UM = UM;
     }
 
     public String getUname() {
@@ -121,6 +132,6 @@ public class Akun {
     public void setBirthY(int birthY) {
         this.birthY = birthY;
     }
-    
+
     
 }

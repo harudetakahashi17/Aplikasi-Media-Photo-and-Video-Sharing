@@ -10,18 +10,19 @@ package mediashareapps;
  * @author Harude
  */
 public class Foto extends Media {
-    private long FID;
+    private static long FID;
     private String path;
     private String caption;
     private int like;
     private String comment;
+    private String location;
 
     public long getFID() {
         return FID;
     }
 
     public void setFID(long FID) {
-        this.FID = FID;
+        FID++;
     }
 
     public String getPath() {
@@ -54,6 +55,16 @@ public class Foto extends Media {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    @Override
+    public void setLocation(String loc) {
+        this.location = loc;
+    }
+
+    @Override
+    public String getLocation() {
+        return location;
     }
     
     

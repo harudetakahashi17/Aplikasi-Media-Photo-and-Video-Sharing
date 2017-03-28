@@ -9,16 +9,8 @@ package mediashareapps;
  *
  * @author Harude
  */
-public class Media {
-    private String location;
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
+public abstract class Media {
     
-    
+    public abstract void setLocation(String loc);
+    public abstract String getLocation();
 }
