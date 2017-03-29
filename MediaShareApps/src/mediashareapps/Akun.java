@@ -29,6 +29,7 @@ public class Akun {
 
     public Akun(String Uname, String Passwd, String IRLName, String email, String phone, char gender, int birthD, int birthM, int birthY) {
         UA = new ArrayList<>();
+        UM = new ArrayList<>();
         uid++;
         this.Uname = Uname;
         this.Passwd = Passwd;
