@@ -51,11 +51,11 @@ public class Driver {
         passwd = s.next();
         
         int i = 0;
-        System.out.println(a.getUA().size());
-        while (!user.equals(a.getUA().get(i).getUname()) && !passwd.equals(a.getUA().get(i).getPasswd()) && (i < a.getUA().size())){
+        
+        while (!user.equals(a.getUA().get(i).getUname()) && !passwd.equals(a.getUA().get(i).getPasswd()) && (i < a.getUA().size()-1)){
             i++;
         }
-        if((user.equals(a.getUA().get(i).getUname())) && (passwd.equals(a.getUA().get(i).getPasswd()))){
+        if((user.equals(a.getUA().get(i).getUname())) && (passwd.equals(a.getUA().get(i).getPasswd())) && a.getUA().size() != i){
             System.out.println(user+" "+passwd);
         } else {
             System.out.println("Username or Password is Invalid!");
