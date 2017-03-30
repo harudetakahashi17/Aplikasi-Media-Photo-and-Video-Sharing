@@ -23,6 +23,7 @@ public class Driver {
             System.out.println("");
         }
     }
+    
     /**
      * @param args the command line arguments
      */
@@ -31,6 +32,7 @@ public class Driver {
         Akun a = new Akun("Harude","test","Dummy1","Email1","123",'M',17,12,1995); //(String Uname, String Passwd, String IRLName, String email, String phone, char gender, int birthD, int birthM, int birthY)
         Akun b = new Akun("Dummy2","test","Dummy2","Email2","312",'F',17,8,1945);
         Akun c = new Akun("Dummy3","test","Dummy3","Email3","321",'M',17,12,2016);
+        
         //List<Akun> la = new ArrayList<>();
         a.setFriend(a);
         a.setFriend(b);
@@ -56,7 +58,8 @@ public class Driver {
             i++;
         }
         if((user.equals(a.getUA().get(i).getUname())) && (passwd.equals(a.getUA().get(i).getPasswd())) && a.getUA().size() != i){
-            System.out.println(user+" "+passwd);
+            cls();
+            Menu.Menu1();
         } else {
             System.out.println("Username or Password is Invalid!");
         }

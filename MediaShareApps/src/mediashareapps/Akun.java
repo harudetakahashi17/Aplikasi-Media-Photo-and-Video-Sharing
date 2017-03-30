@@ -134,5 +134,4 @@ public class Akun {
         this.birthY = birthY;
     }
 
-    
 }
