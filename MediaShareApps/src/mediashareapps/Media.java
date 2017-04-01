@@ -10,7 +10,7 @@ package mediashareapps;
  * @author Harude
  */
 public abstract class Media {
-    
     public abstract void setLocation(String loc);
     public abstract String getLocation();
+
 }

@@ -21,7 +21,7 @@ public class Foto extends Media {
         return FID;
     }
 
-    public void setFID(long FID) {
+    public void setFID() {
         FID++;
     }
 
