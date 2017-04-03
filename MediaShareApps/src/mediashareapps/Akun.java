@@ -14,7 +14,8 @@ import java.util.List;
  */
 public class Akun {
 
-    private List<Akun> UA;
+    public static List<Akun> UA;
+    private List<Akun> PA;
     private List<Media> UM;
     private static long uid;
     private String Uname;
@@ -22,13 +23,13 @@ public class Akun {
     private String IRLName;
     private String email;
     private String phone;
-    private char gender;
+    private String gender;
     private int birthD;
     private int birthM;
     private int birthY;
 
-    public Akun(String Uname, String Passwd, String IRLName, String email, String phone, char gender, int birthD, int birthM, int birthY) {
-        UA = new ArrayList<>();
+    public Akun(String Uname, String Passwd, String IRLName, String email, String phone, String gender, int birthD, int birthM, int birthY) {
+        PA = new ArrayList<>();
         UM = new ArrayList<>();
         uid++;
         this.Uname = Uname;
@@ -102,11 +103,11 @@ public class Akun {
         this.phone = phone;
     }
 
-    public char getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
