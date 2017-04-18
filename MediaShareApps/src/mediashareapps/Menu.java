@@ -5,7 +5,6 @@
  */
 package mediashareapps;
 
-import static java.lang.System.in;
 import java.util.Scanner;
 import static mediashareapps.Driver.cls;
 
@@ -72,7 +71,7 @@ public class Menu {
             System.out.println("Menu Sign Up:");
             System.out.print("Username : ");
             user = menu.nextLine();
-            System.out.print("Password");
+            System.out.print("Password : ");
             passwd = menu.nextLine();
             System.out.print("Real Name : ");
             IRL = menu.nextLine();
@@ -82,11 +81,11 @@ public class Menu {
             phone = menu.nextLine();
             System.out.print("Gender (Male/Female): ");
             gender = menu.nextLine();
-            System.out.print("Birth Day : ");
+            System.out.print("Birth Day (DD): ");
             dd = menu.nextInt();
-            System.out.print("Birth Month : ");
+            System.out.print("Birth Month (MM): ");
             mm = menu.nextInt();
-            System.out.print("Birth Year : ");
+            System.out.print("Birth Year (YYYY): ");
             yy = menu.nextInt();
             Akun a = new Akun(user,passwd,IRL,email,phone,gender,dd,mm,yy);
             Akun.UA.add(a);

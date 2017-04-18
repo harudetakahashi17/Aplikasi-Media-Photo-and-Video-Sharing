@@ -25,47 +25,32 @@ public class Video extends Media {
         VID++;
     }
 
-    @Override
-    public void setLocation(String loc) {
-        this.location = loc;
+    public void setPath(String path) {
+        this.path = path+".mp4";
     }
 
     @Override
-    public String getLocation() {
-        return location;
-    }
-
     public String getPath() {
         return path;
     }
 
-    public void setPath(String path) {
+    public Video(String path, String caption, String location) {
         this.path = path;
-    }
-
-    public String getCaption() {
-        return caption;
-    }
-
-    public void setCaption(String caption) {
         this.caption = caption;
+        this.location = location;
+        VID++;
     }
 
-    public int getLike() {
-        return like;
+    public Video(String path, String caption) {
+        this.path = path;
+        this.caption = caption;
+        VID++;
     }
 
-    public void setLike(int like) {
-        this.like = like;
+    public Video(String path) {
+        this.path = path;
+        VID++;
     }
 
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-    
     
 }

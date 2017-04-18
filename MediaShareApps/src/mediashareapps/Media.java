@@ -4,13 +4,24 @@
  * and open the template in the editor.
  */
 package mediashareapps;
+import java.util.List;
 
 /**
  *
  * @author Harude
  */
 public abstract class Media {
-    public abstract void setLocation(String loc);
-    public abstract String getLocation();
+    private List<Akun> tagged;
+    
+    public abstract void setPath(String path);
+    public abstract String getPath();
 
+    public Akun getTagged(int i) {
+        return tagged.get(i);
+    }
+
+    public void addTag(Akun a) {
+        tagged.add(a);
+    }
+    
 }

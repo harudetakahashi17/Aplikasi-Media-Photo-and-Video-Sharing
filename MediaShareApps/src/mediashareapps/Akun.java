@@ -17,7 +17,7 @@ public class Akun {
     public static List<Akun> UA;
     private List<Akun> PA;
     private List<Media> UM;
-    private static long uid;
+    private static int uid;
     private String Uname;
     private String Passwd;
     private String IRLName;
@@ -43,7 +43,7 @@ public class Akun {
         this.birthY = birthY;
     }
 
-    public long getUid() {
+    public int getUid() {
         return uid;
     }
     
@@ -134,5 +134,19 @@ public class Akun {
     public void setBirthY(int birthY) {
         this.birthY = birthY;
     }
-
+    
+    public void createMediaFoto(String path){
+        Media m = new Foto(path);
+        UM.add(m);
+    }
+    
+    public void createMediaFoto(String path, String caption){
+        Media m = new Foto(path,caption);
+        UM.add(m);
+    }
+    
+    public void createMediaFoto(String path, String caption, String loc){
+        Media m = new Foto(path,caption,loc);
+        UM.add(m);
+    }
 }

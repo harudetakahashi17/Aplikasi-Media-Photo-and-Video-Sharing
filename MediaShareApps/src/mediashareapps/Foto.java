@@ -25,47 +25,32 @@ public class Foto extends Media {
         FID++;
     }
 
+    public void setPath(String path) {
+        this.path = path+".jpg";
+    }
+
+    @Override
     public String getPath() {
         return path;
     }
 
-    public void setPath(String path) {
+    public Foto(String path) {
         this.path = path;
+        FID++;
     }
 
-    public String getCaption() {
-        return caption;
-    }
-
-    public void setCaption(String caption) {
+    public Foto(String path, String caption, String location) {
+        this.path = path;
         this.caption = caption;
+        this.location = location;
+        FID++;
     }
 
-    public int getLike() {
-        return like;
+    public Foto(String path, String caption) {
+        this.path = path;
+        this.caption = caption;
+        FID++;
     }
 
-    public void setLike(int like) {
-        this.like = like;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-
-    @Override
-    public void setLocation(String loc) {
-        this.location = loc;
-    }
-
-    @Override
-    public String getLocation() {
-        return location;
-    }
-    
     
 }
