@@ -10,6 +10,7 @@ package Model;
  * @author Harude
  */
 public class Video extends Media {
+    private static int VID;
     private String path;
     private String caption;
     private int like;
@@ -17,18 +18,21 @@ public class Video extends Media {
     private String loc;
 
     public Video(String path) {
-        this.path = path;
-    }
-
-    public Video(String path, String caption) {
-        this.path = path;
-        this.caption = caption;
+        VID++;
+        setPath(path);
     }
 
     public Video(String path, String caption, String loc) {
-        this.path = path;
+        VID++;
+        setPath(path);
         this.caption = caption;
         this.loc = loc;
+    }
+
+    public Video(String path, String caption) {
+        VID++;
+        setPath(path);
+        this.caption = caption;
     }
 
     public String getCaption() {
@@ -65,8 +69,19 @@ public class Video extends Media {
 
     @Override
     public void setPath(String path) {
+        path = VID + ".mp4";
         this.path = path;
     }
     
-    
+    @Override
+    public String getPath(Akun a, int i) {
+        Media x = a.getListMedia().get(i);
+        String s = x.getFile();
+        return s;
+    }
+
+    @Override
+    public String getFile() {
+        return path;
+    }
 }

@@ -28,9 +28,14 @@ public class LoginView extends javax.swing.JPanel {
         return btnSignUp;
     }
     
+    public Object getBtnHelp(){
+        return btnHelp;
+    }
+    
     public void addListener(ActionListener e) {
         btnSignUp.addActionListener(e);
         btnLogin.addActionListener(e);
+        btnHelp.addActionListener(e);
     }
 
     /**
@@ -46,7 +51,7 @@ public class LoginView extends javax.swing.JPanel {
         Username = new javax.swing.JLabel();
         Password = new javax.swing.JLabel();
         tfUname = new javax.swing.JTextField();
-        tfPasswd = new javax.swing.JTextField();
+        pfPasswd = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
         btnHelp = new javax.swing.JButton();
         btnSignUp = new javax.swing.JButton();
@@ -59,6 +64,12 @@ public class LoginView extends javax.swing.JPanel {
         Username.setText("Username");
 
         Password.setText("Password");
+
+        tfUname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfUnameActionPerformed(evt);
+            }
+        });
 
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +90,7 @@ public class LoginView extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 110, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(Title)
@@ -92,16 +103,17 @@ public class LoginView extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(Username)
                                 .addGap(18, 18, 18)
-                                .addComponent(tfUname, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tfUname))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(Password)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
+                                        .addGap(0, 2, Short.MAX_VALUE)
                                         .addComponent(btnLogin)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGap(86, 86, 86)
                                         .addComponent(btnSignUp))
-                                    .addComponent(tfPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(pfPasswd))))
                         .addContainerGap(122, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -116,7 +128,7 @@ public class LoginView extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Password)
-                    .addComponent(tfPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pfPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLogin)
@@ -131,6 +143,10 @@ public class LoginView extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLoginActionPerformed
 
+    private void tfUnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfUnameActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Password;
@@ -139,7 +155,7 @@ public class LoginView extends javax.swing.JPanel {
     private javax.swing.JButton btnHelp;
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnSignUp;
-    private javax.swing.JTextField tfPasswd;
+    private javax.swing.JPasswordField pfPasswd;
     private javax.swing.JTextField tfUname;
     // End of variables declaration//GEN-END:variables
 }

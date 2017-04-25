@@ -10,30 +10,35 @@ package Model;
  * @author Harude
  */
 public class Foto extends Media{
+    private static int FID;
     private String path;
     private String caption;
     private int like;
     private String comment;
     private String loc;
 
-    public Foto(String path) {
+    @Override
+    public void setPath(String path) {
+        path = FID + ".jpg";
         this.path = path;
+    }
+    
+    public Foto(String path) {
+        FID++;
+        setPath(path);
     }
 
     public Foto(String path, String caption, String loc) {
-        this.path = path;
+        FID++;
+        setPath(path);
         this.caption = caption;
         this.loc = loc;
     }
 
     public Foto(String path, String caption) {
-        this.path = path;
+        FID++;
+        setPath(path);
         this.caption = caption;
-    }
-
-    @Override
-    public void setPath(String path) {
-        this.path = path;
     }
 
     public String getCaption() {
@@ -66,6 +71,18 @@ public class Foto extends Media{
 
     public void setLoc(String loc) {
         this.loc = loc;
+    }
+
+    @Override
+    public String getPath(Akun a, int i) {
+        Media x = a.getListMedia().get(i);
+        String s = x.getFile();
+        return s;
+    }
+
+    @Override
+    public String getFile() {
+        return path;
     }
     
     

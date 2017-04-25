@@ -40,10 +40,7 @@
                                       <Component id="Username" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="Email" max="32767" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="Email" max="32767" attributes="0"/>
                                       <Group type="102" attributes="0">
                                           <Component id="Name" pref="48" max="32767" attributes="0"/>
                                           <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
@@ -79,7 +76,7 @@
                           </Group>
                           <Component id="optional" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="53" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="43" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>

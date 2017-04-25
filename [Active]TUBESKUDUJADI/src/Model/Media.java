@@ -14,7 +14,6 @@ import java.util.ArrayList;
 public abstract class Media {
     private static int MID;
     private ArrayList<Akun> tagged;
-    private String path;
     
     public void tagPerson(Akun p){
         tagged.add(p);
@@ -25,5 +24,7 @@ public abstract class Media {
     }
     
     public abstract void setPath(String path);
+    public abstract String getPath(Akun a, int i);
+    public abstract String getFile();
     
 }
