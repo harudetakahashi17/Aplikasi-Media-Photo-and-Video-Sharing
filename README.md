@@ -3,6 +3,19 @@ Tugas Besar OOP (Java)
 Untuk gambaran Class Diagram
 http://bit.ly/TubesOOP2016
 
+PERHATIKAN MINIMUM SPEC!
+==================================================
+Final Phase : 
+  - Buat Database sesuai sama ERD/Skema yang udah dibuat
+  Kalau ada yang harus direvisi, langsung lapor.
+  
+  - GUI udah direlasiin, tinggal cari tau gimana cara
+  untuk memilih file dengan filetype tertentu.
+  
+  - Tampilkan Semua foto & video User dan temannya di Home.
+  - Tampilkan List User yang dicari di SearchList
+  - Tampilkan Foto profile di panel yang disediakan
+
 
 Minimum Spec:
 ==================================================
