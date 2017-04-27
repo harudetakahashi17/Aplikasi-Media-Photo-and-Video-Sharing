@@ -6,6 +6,8 @@
 package View2;
 
 import java.awt.CardLayout;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
@@ -19,8 +21,11 @@ public class HomePage extends javax.swing.JFrame {
      */
     private CardLayout cardLayout;
     
+    
     public HomePage() {
         initComponents();
+        JFrame frame = new JFrame("Media Sharing");
+        frame.setSize(1024,600);
         cardLayout = new CardLayout();
         HomeView.setLayout(cardLayout);
     }
@@ -29,8 +34,51 @@ public class HomePage extends javax.swing.JFrame {
         return HomeView;
     }
 
-    public CardLayout getCardLayout() {
+    public CardLayout getCardLayout2() {
         return cardLayout;
+    }
+    
+    public Object getBtnHome(){
+        return btnHome;
+    }
+    
+    public Object getBtnSearch(){
+        return btnSearch;
+    }
+    
+    public Object getBtnHelp(){
+        return btnHelp;
+    }
+    
+    public Object getBtnFriends(){
+        return btnFriends;
+    }
+    
+    public Object getBtnProfile(){
+        return btnProfile;
+    }
+    
+    public Object getBtnLogout(){
+        return btnLogout;
+    }
+    
+    public Object getBtnNewPhoto(){
+        return btnNewPhoto;
+    }
+    
+    public Object getBtnNewVideo(){
+        return btnNewVideo;
+    }
+    
+    public void addListener(ActionListener e) {
+        btnHome.addActionListener(e);
+        btnSearch.addActionListener(e);
+        btnHelp.addActionListener(e);
+        btnFriends.addActionListener(e);
+        btnProfile.addActionListener(e);
+        btnLogout.addActionListener(e);
+        btnNewVideo.addActionListener(e);
+        btnNewPhoto.addActionListener(e);
     }
 
     /**
@@ -50,13 +98,13 @@ public class HomePage extends javax.swing.JFrame {
         btnFriends = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
         tfSearch = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnHome = new javax.swing.JButton();
         HomeView = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Media Sharing");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(880, 600));
+        setPreferredSize(new java.awt.Dimension(880, 700));
         setResizable(false);
 
         btnHelp.setText("Help");
@@ -81,7 +129,7 @@ public class HomePage extends javax.swing.JFrame {
 
         btnSearch.setText("Search");
 
-        jButton1.setText("Home");
+        btnHome.setText("Home");
 
         HomeView.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         HomeView.setPreferredSize(new java.awt.Dimension(800, 548));
@@ -90,7 +138,7 @@ public class HomePage extends javax.swing.JFrame {
         HomeView.setLayout(HomeViewLayout);
         HomeViewLayout.setHorizontalGroup(
             HomeViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 856, Short.MAX_VALUE)
         );
         HomeViewLayout.setVerticalGroup(
             HomeViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,14 +152,14 @@ public class HomePage extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(HomeView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(HomeView, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnNewPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnNewVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                        .addComponent(btnHome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                         .addComponent(tfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSearch)
@@ -137,7 +185,7 @@ public class HomePage extends javax.swing.JFrame {
                     .addComponent(btnFriends)
                     .addComponent(btnSearch)
                     .addComponent(tfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
+                    .addComponent(btnHome)
                     .addComponent(btnHelp, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(HomeView, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE)
@@ -160,12 +208,12 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JPanel HomeView;
     private javax.swing.JButton btnFriends;
     private javax.swing.JButton btnHelp;
+    private javax.swing.JButton btnHome;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnNewPhoto;
     private javax.swing.JButton btnNewVideo;
     private javax.swing.JButton btnProfile;
     private javax.swing.JButton btnSearch;
-    private javax.swing.JButton jButton1;
     private javax.swing.JTextField tfSearch;
     // End of variables declaration//GEN-END:variables
 }
