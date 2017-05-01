@@ -5,6 +5,7 @@
  */
 package Model;
 
+import db.dbConn;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -13,37 +14,34 @@ import java.util.Date;
  * @author Harude
  */
 public class Aplikasi {
-    private ArrayList<Akun> listUser;
+    
+    private dbConn db;
+    private ArrayList<Akun> listUser = db.loadAkun();
     private ArrayList<Media> listUserMedia;
 
     public Aplikasi() {
         listUser = new ArrayList();
         listUserMedia = new ArrayList();
+        db = new dbConn();
+        db.connect();
     }
     
-    public void addAkun(String username, String password, String rname, String email, String gender, Date birthday){
-        Akun a = new Akun(username, password, rname, email, gender, birthday);
+    public void addAkun(String username, String password, String rname, String email, String gender){
+        Akun a = new Akun(username, password, rname, email, gender);
         listUser.add(a);
+        db.addUser(a);
     }
     
-    public void addAkun(String username, String password, String rname, String email, String phone, String gender, Date birthday){
-        Akun a = new Akun(username, password, rname, email, phone, gender, birthday);
+    public void addAkun(String username, String password, String rname, String email, String phone, String gender){
+        Akun a = new Akun(username, password, rname, email, phone, gender);
         listUser.add(a);
+        db.addUser(a);
     }
     
-    public void Login(String uname, String passwd){
-        
-        int i = 0;
-        while (!uname.equals(listUser.get(i).getUsername()) &&
-                !passwd.equals(listUser.get(i).getPassword()) &&
-                i < listUser.size()){
-            i++;
-        }
-        if (i >= listUser.size()){
-            throw new IllegalStateException("Username / Password salah");
-        } else {
-            //Lari ke Menu
-        }
+    public boolean Login(String uname, String passwd){
+        boolean stat = false;
+        if (db.authUser(uname, passwd) == true)
+        return stat;
     }
     
     public void addFriend(Akun a, Akun b){

@@ -7,6 +7,7 @@ package Model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -21,20 +22,20 @@ public class Akun {
     public static void setUID(int aUID) {
         UID = aUID;
     }
-    private ArrayList<Media> listMedia;
+    
     private ArrayList<Akun> friends;
     private static int UID;
+    private int uid;
     private String username;
     private String password;
     private String rname;
     private String email;
     private String phone;
     private String gender;
-    private Date birthday;
+    //private Date birthday;
 
-    public Akun(String username, String password, String rname, String email, String phone, String gender, Date birthday) {
-        UID++;
-        listMedia = new ArrayList();
+    public Akun(String username, String password, String rname, String email, String phone, String gender) {
+        uid = UID++;
         friends = new ArrayList();
         this.username = username;
         this.password = password;
@@ -42,27 +43,18 @@ public class Akun {
         this.email = email;
         this.phone = phone;
         this.gender = gender;
-        this.birthday = birthday;
+        //this.birthday = birthday;
     }
 
-    public Akun(String username, String password, String rname, String email, String gender, Date birthday) {
-        UID++;
-        listMedia = new ArrayList();
+    public Akun(String username, String password, String rname, String email, String gender) {
+        uid = UID++;
         friends = new ArrayList();
         this.username = username;
         this.password = password;
         this.rname = rname;
         this.email = email;
         this.gender = gender;
-        this.birthday = birthday;
-    }
-
-    public ArrayList<Media> getListMedia() {
-        return listMedia;
-    }
-
-    public void setListMedia(ArrayList<Media> listMedia) {
-        this.listMedia = listMedia;
+        //this.birthday = birthday;
     }
 
     public ArrayList<Akun> getFriends() {
@@ -121,12 +113,20 @@ public class Akun {
         this.gender = gender;
     }
 
-    public Date getBirthday() {
-        return birthday;
+//    public Date getBirthday() {
+//        return birthday;
+//    }
+//
+//    public void setBirthday(Date birthday) {
+//        this.birthday = birthday;
+//    }
+
+    public int getUid() {
+        return uid;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setUid(int uid) {
+        this.uid = uid;
     }
     
     

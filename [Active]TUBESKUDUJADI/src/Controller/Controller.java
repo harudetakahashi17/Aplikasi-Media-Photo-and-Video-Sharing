@@ -5,9 +5,10 @@
  */
 package Controller;
 
-import Model.Aplikasi;
+import Model.*;
 import View.*;
 import View2.*;
+import db.dbConn;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -80,6 +81,9 @@ public class Controller implements ActionListener {
         if (currentView.equals("0")) {
             //current view = Main Menu
             if (s.equals(Login.getBtnLogin())){
+                String uname = Login.getUname();
+                String passwd = Login.getPasswd();
+                
                 view2.setVisible(true);
                 view.dispose();
             }
@@ -93,6 +97,19 @@ public class Controller implements ActionListener {
         } else if (currentView.equals("1")) {
             //current view = Main Menu
             if (s.equals(SignUp.getBtnBack())) {
+                currentView = "0";
+                view.getCardLayout().show(mainPanel, currentView);
+            }
+            if (s.equals(SignUp.getBtnSignUp())) {
+                int id = Akun.getUID();
+                String uname = SignUp.getUsername();
+                String password = SignUp.getPassword();
+                String rName = SignUp.getRName();
+                String email = SignUp.getEmail();
+                String phone = SignUp.getPhone();
+                String gender = SignUp.getGender();
+                model.addAkun(uname,password,rName,email,phone,gender);
+                SignUp.reset();
                 currentView = "0";
                 view.getCardLayout().show(mainPanel, currentView);
             }

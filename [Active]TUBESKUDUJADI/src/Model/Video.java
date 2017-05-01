@@ -74,14 +74,9 @@ public class Video extends Media {
     }
     
     @Override
-    public String getPath(Akun a, int i) {
-        Media x = a.getListMedia().get(i);
-        String s = x.getFile();
-        return s;
+    public String getPath() {
+        
+        return null;
     }
 
-    @Override
-    public String getFile() {
-        return path;
-    }
 }

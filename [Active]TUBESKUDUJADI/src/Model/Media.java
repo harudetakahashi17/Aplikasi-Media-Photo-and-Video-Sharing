@@ -24,7 +24,6 @@ public abstract class Media {
     }
     
     public abstract void setPath(String path);
-    public abstract String getPath(Akun a, int i);
-    public abstract String getFile();
+    public abstract String getPath();
     
 }

@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Harude/Documents/GitHub/Aplikasi-Media-Photo-and-Video-Sharing/%5BActive%5DTUBESKUDUJADI/src/View2/ChooseVideo.java</file>
-            <file>file:/C:/Users/Harude/Documents/GitHub/Aplikasi-Media-Photo-and-Video-Sharing/%5BActive%5DTUBESKUDUJADI/src/View2/ChoosePhoto.java</file>
-            <file>file:/C:/Users/Harude/Documents/GitHub/Aplikasi-Media-Photo-and-Video-Sharing/%5BActive%5DTUBESKUDUJADI/src/View2/HomePage.java</file>
+            <file>file:/C:/Users/Harude/Documents/GitHub/Aplikasi-Media-Photo-and-Video-Sharing/%5BActive%5DTUBESKUDUJADI/src/View/SignUpView.java</file>
+            <file>file:/C:/Users/Harude/Documents/GitHub/Aplikasi-Media-Photo-and-Video-Sharing/%5BActive%5DTUBESKUDUJADI/src/Model/Aplikasi.java</file>
+            <file>file:/C:/Users/Harude/Documents/GitHub/Aplikasi-Media-Photo-and-Video-Sharing/%5BActive%5DTUBESKUDUJADI/src/Model/Akun.java</file>
+            <file>file:/C:/Users/Harude/Documents/GitHub/Aplikasi-Media-Photo-and-Video-Sharing/%5BActive%5DTUBESKUDUJADI/src/db/dbConn.java</file>
             <file>file:/C:/Users/Harude/Documents/GitHub/Aplikasi-Media-Photo-and-Video-Sharing/%5BActive%5DTUBESKUDUJADI/src/Controller/Controller.java</file>
+            <file>file:/C:/Users/Harude/Documents/GitHub/Aplikasi-Media-Photo-and-Video-Sharing/%5BActive%5DTUBESKUDUJADI/src/View/LoginView.java</file>
         </group>
     </open-files>
 </project-private>

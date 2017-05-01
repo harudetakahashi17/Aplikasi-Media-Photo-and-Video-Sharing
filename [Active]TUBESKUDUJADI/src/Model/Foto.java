@@ -74,15 +74,9 @@ public class Foto extends Media{
     }
 
     @Override
-    public String getPath(Akun a, int i) {
-        Media x = a.getListMedia().get(i);
-        String s = x.getFile();
-        return s;
-    }
-
-    @Override
-    public String getFile() {
-        return path;
+    public String getPath() {
+        
+        return null;
     }
     
     

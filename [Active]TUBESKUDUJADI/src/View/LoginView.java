@@ -32,6 +32,14 @@ public class LoginView extends javax.swing.JPanel {
         return btnHelp;
     }
     
+    public String getUname(){
+        return tfUname.getText();
+    }
+    
+    public String getPasswd(){
+        return pfPasswd.getText();
+    }
+    
     public void addListener(ActionListener e) {
         btnSignUp.addActionListener(e);
         btnLogin.addActionListener(e);
@@ -89,32 +97,29 @@ public class LoginView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 110, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Title)
+                        .addGap(0, 275, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(Title)
-                                .addGap(95, 95, 95))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnHelp)
-                                .addContainerGap())))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btnSignUp)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnHelp))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(Username)
                                 .addGap(18, 18, 18)
                                 .addComponent(tfUname))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(Password)
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(0, 2, Short.MAX_VALUE)
                                         .addComponent(btnLogin)
-                                        .addGap(86, 86, 86)
-                                        .addComponent(btnSignUp))
+                                        .addGap(0, 0, Short.MAX_VALUE))
                                     .addComponent(pfPasswd))))
-                        .addContainerGap(122, Short.MAX_VALUE))))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,11 +135,11 @@ public class LoginView extends javax.swing.JPanel {
                     .addComponent(Password)
                     .addComponent(pfPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+                .addComponent(btnLogin)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnLogin)
+                    .addComponent(btnHelp)
                     .addComponent(btnSignUp))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addComponent(btnHelp)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
